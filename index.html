@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+ <head>
+ 	<meta charset="utf-8">
+ 	<title>Styles Conference</title>
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+   
+    <style type="text/css">
+        body{
+            height:  100vh;
+            width: 100vw;
+        }
+        .active{
+            display: block !important;
+            animation: spin 1s infinite ;
+            width: 200px;
+            height: 200px;
+            background: crimson;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            flex-direction: column;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        
+        .spinner{
+            text-align: center;
+            display: none;
+            border-radius: 20px;
+
+        }
+        @keyframes spin{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+ </head>
+ <body>
+    <div class="box">
+        <div class="spinner">XUY</div>
+    <button class="btn">Нажми сюда </button>
+        
+
+    </div>
+     <script type="text/javascript" defer>
+        let btn  = document.querySelector('.btn')
+        btn.addEventListener('click',()=>{
+            document.querySelector('.spinner').classList.add('active')
+        })
+    </script>
+ </body>
+</html>
+
