@@ -30,7 +30,17 @@
             top: 50%;
             transform: translate(-50%,-50%);
         }
-        
+        button.new {
+    background: -moz-linear-gradient(#00BBD6, #EBFFFF);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#FDC830), to(#F37335));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
+    padding: 20px 100px;
+    color: #333;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 100px;
+    border: 1px solid #666;
+   }
         .spinner{
             text-align: center;
             display: none;
@@ -50,12 +60,12 @@
  <body>
     <div class="box">
         <div class="spinner">+7(905)022-73-55</div>
-    <button class="btn">Poof</button>
+    <button class="new">Poof</button>
         <audio  autoplay='false' src="./sound.mp3"></audio>
 
     </div>
      <script type="text/javascript" defer>
-        let btn  = document.querySelector('.btn')
+        let btn  = document.querySelector('.new')
         btn.addEventListener('click',()=>{
             document.querySelector('.spinner').classList.add('active')
             let audio =document.querySelector('audio');
